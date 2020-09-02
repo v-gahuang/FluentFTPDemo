@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5368FE1B-B140-4DC7-A767-4D0483EA4300}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FluentFTPDemo</RootNamespace>
+    <AssemblyName>FluentFTPDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentFTP, Version=32.4.4.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentFTP.32.4.4\lib\net45\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Examples\Connect.cs" />
+    <Compile Include="Examples\ConnectFTPS.cs" />
+    <Compile Include="Examples\ConnectFTPSCertificate.cs" />
+    <Compile Include="Examples\CreateDirectory.cs" />
+    <Compile Include="Examples\CustomParser.cs" />
+    <Compile Include="Examples\Debug.cs" />
+    <Compile Include="Examples\DeleteDirectory.cs" />
+    <Compile Include="Examples\DeleteFile.cs" />
+    <Compile Include="Examples\DereferenceLink.cs" />
+    <Compile Include="Examples\DirectoryExists.cs" />
+    <Compile Include="Examples\DownloadDirectory.cs" />
+    <Compile Include="Examples\DownloadDirectoryWithRules.cs" />
+    <Compile Include="Examples\DownloadFile.cs" />
+    <Compile Include="Examples\DownloadFileWithProgress.cs" />
+    <Compile Include="Examples\DownloadManyFiles.cs" />
+    <Compile Include="Examples\ExecuteFTPCommand.cs" />
+    <Compile Include="Examples\Extensions.cs" />
+    <Compile Include="Examples\FileExists.cs" />
+    <Compile Include="Examples\GetChecksum.cs" />
+    <Compile Include="Examples\GetFileSize.cs" />
+    <Compile Include="Examples\GetHash.cs" />
+    <Compile Include="Examples\GetHashAlgorithm.cs" />
+    <Compile Include="Examples\GetListing.cs" />
+    <Compile Include="Examples\GetListingWithLinks.cs" />
+    <Compile Include="Examples\GetModifiedTime.cs" />
+    <Compile Include="Examples\GetNameListing.cs" />
+    <Compile Include="Examples\GetWorkingDirectory.cs" />
+    <Compile Include="Examples\OpenAppend.cs" />
+    <Compile Include="Examples\OpenRead.cs" />
+    <Compile Include="Examples\OpenWrite.cs" />
+    <Compile Include="Examples\Rename.cs" />
+    <Compile Include="Examples\SetHashAlgorithm.cs" />
+    <Compile Include="Examples\SetWorkingDirectory.cs" />
+    <Compile Include="Examples\UploadDirectory.cs" />
+    <Compile Include="Examples\UploadDirectoryWithRules.cs" />
+    <Compile Include="Examples\UploadFile.cs" />
+    <Compile Include="Examples\UploadFileWithProgress.cs" />
+    <Compile Include="Examples\UploadManyFiles.cs" />
+    <Compile Include="FluentFTPClient.cs" />
+    <Compile Include="IFluentFTPClient.cs" />
+    <Compile Include="Model\FtpClientConfig.cs" />
+    <Compile Include="Model\FtpClientConfigExtensions.cs" />
+    <Compile Include="Model\GroupKey.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
